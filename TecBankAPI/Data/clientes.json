@@ -1,0 +1,14 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "Juan Pérez",
+        "Correo": "juan@tecbank.com",
+        "Telefono": "555-1234"
+    },
+    {
+        "Id": 2,
+        "Nombre": "María Gómez",
+        "Correo": "maria@tecbank.com",
+        "Telefono": "555-5678"
+    }
+]
