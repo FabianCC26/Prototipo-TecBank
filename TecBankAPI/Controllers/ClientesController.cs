@@ -51,16 +51,23 @@ namespace TecBankAPI.Controllers
         {
             var clientes = _clienteService.GetClientes();
             var cliente = clientes.FirstOrDefault(c => c.Id == id);
+
             if (cliente == null)
             {
                 return NotFound();
             }
+
+            // Actualiza los campos del cliente
             cliente.Nombre = clienteActualizado.Nombre;
             cliente.Correo = clienteActualizado.Correo;
             cliente.Telefono = clienteActualizado.Telefono;
+
             _clienteService.SaveClientes(clientes);
-            return NoContent();
+
+            // Devuelve el cliente actualizado con un 200 OK
+            return Ok(cliente);
         }
+
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
