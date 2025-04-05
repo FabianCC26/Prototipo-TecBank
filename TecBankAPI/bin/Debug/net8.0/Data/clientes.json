@@ -1,17 +1,5 @@
 [
   {
-    "Id": 1,
-    "Nombre": "Carlos Ruiz",
-    "Correo": "carlos.nuevo@tecbank.com",
-    "Telefono": "555-1111"
-  },
-  {
-    "Id": 2,
-    "Nombre": "Mar\uFFFDa G\uFFFDmez",
-    "Correo": "maria@tecbank.com",
-    "Telefono": "555-5678"
-  },
-  {
     "Id": 3,
     "Nombre": "Carlos Ruiz",
     "Correo": "carlos@tecbank.com",
