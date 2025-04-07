@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="app">
+        <VentanaPrincipal /> <!--  Aquí se usa el componente -->
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import VentanaPrincipal from './components/VentanaPrincipal.vue' // Importa el componente VentanaPrincipal
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VentanaPrincipal // Registra el componente VentanaPrincipal
   }
 }
 </script>
