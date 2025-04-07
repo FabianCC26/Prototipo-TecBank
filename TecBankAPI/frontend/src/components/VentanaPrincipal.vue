@@ -1,52 +1,48 @@
 <template>
     <div class="container mt-5">
-        <h2 class="mb-4 text-center">Gestion de Clientes</h2>
-
-        <!-- Botones de acciones -->
-        <div class="d-grid gap-3 col-6 mx-auto">
-            <button class="btn btn-primary" @click="accion = 'crear'">Registrar Cliente</button>
-            <button class="btn btn-warning" @click="accion = 'modificar'">Modificar Cliente</button>
-            <button class="btn btn-danger" @click="accion = 'eliminar'">Eliminar Cliente</button>
-            <button class="btn btn-success" @click="fetchClientes">Mostrar Todos</button>
+        <h2 class="mb-4">Gestion de Clientes</h2>
+        <div class="d-grid gap-3"> <!-- Botones para navegar a las diferentes vistas con router-->
+            
+            <router-link to="/agregar" class="btn btn-success">Agregar Cliente</router-link>
+            <router-link to="/modificar" class="btn btn-warning">Modificar Cliente</router-link>
+            <router-link to="/eliminar" class="btn btn-danger">Eliminar Cliente</router-link>
+            <button class="btn btn-primary" @click="cargarClientes">Mostrar Todos</button>
         </div>
 
-        <!-- Lista de clientes -->
-        <div class="mt-4" v-if="clientes.length > 0">
-            <h4>Lista de Clientes</h4>
-            <ul class="list-group">
-                <li v-for="cliente in clientes" :key="cliente.id" class="list-group-item">
-                    {{ cliente.nombre }} - {{ cliente.correo }} - {{ cliente.telefono }}
-                </li>
-            </ul>
-        </div>
+        <ul class="list-group mt-4" v-if="clientes.length">
+            <li class="list-group-item" v-for="cliente in clientes" :key="cliente.id">
+                {{ cliente.nombre }} - {{ cliente.correo }} - {{ cliente.telefono }}
+            </li>
+        </ul>
 
-        <p v-else class="text-center mt-3 text-muted">No hay datos aun.</p>
+        <p v-else class="mt-4 text-muted">No hay clientes por mostrar.</p>
     </div>
 </template>
 
 <script>
-    import axios from 'axios'
+import axios from 'axios'
 
-    export default {
-        name: 'VentanaPrincipal',
-        data() {
-            return {
-                clientes: [],
-                accion: ''
-            }
-        },
-        methods: {
-            async fetchClientes() {
-                try {
-                    const response = await axios.get('/api/clientes')
-                    this.clientes = response.data
-                } catch (error) {
-                    console.error('Error al obtener los clientes:', error)
-                }
-            }
-        }
+export default {
+  name: 'VentanaPrincipal',
+  data() {
+    return {
+      clientes: []
     }
+  },
+  methods: {
+      // Método para cargar todos los clientes desde la API
+    async cargarClientes() {
+      try {
+        const res = await axios.get('/api/clientes')
+        this.clientes = res.data
+      } catch (err) {
+        console.error('Error al cargar los clientes:', err)
+      }
+    }
+  }
+}
 </script>
+
 
 <style scoped>
     h2 {

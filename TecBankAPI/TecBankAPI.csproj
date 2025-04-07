@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="frontend\src\assets\" />
   </ItemGroup>
 
   <ItemGroup>

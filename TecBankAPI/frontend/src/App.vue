@@ -1,17 +1,13 @@
 <template>
     <div id="app">
-        <VentanaPrincipal /> <!--  Aquí se usa el componente -->
+        <router-view /> <!-- Aquí se renderizarán las vistas de los componentes según la ruta actual -->
     </div>
 </template>
 
 <script>
-    import VentanaPrincipal from './components/VentanaPrincipal.vue' // Importa el componente VentanaPrincipal
 
 export default {
-  name: 'App',
-  components: {
-    VentanaPrincipal // Registra el componente VentanaPrincipal
-  }
+  name: 'App'
 }
 </script>
 
