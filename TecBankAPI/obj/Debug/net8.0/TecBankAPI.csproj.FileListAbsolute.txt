@@ -36,3 +36,17 @@ C:\Users\fabia\source\repos\TecBankAPI\obj\Debug\net8.0\TecBankAPI.genruntimecon
 C:\Users\fabia\source\repos\TecBankAPI\obj\Debug\net8.0\ref\TecBankAPI.dll
 C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\Data\clientes.json
 C:\Users\fabia\source\repos\TecBankAPI\obj\Debug\net8.0\TecBankAPI.sourcelink.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\web.config
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\web.config
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\appsettings.Development.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\appsettings.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\Data\clientes.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\appsettings.Development.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\appsettings.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\Data\clientes.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\TecBankAPI.deps.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\TecBankAPI.runtimeconfig.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\PublicadoEnIIS\TecBankAPI.staticwebassets.endpoints.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\TecBankAPI.deps.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\TecBankAPI.runtimeconfig.json
+C:\Users\fabia\source\repos\TecBankAPI\bin\Debug\net8.0\PublicadoEnIIS\TecBankAPI.staticwebassets.endpoints.json
