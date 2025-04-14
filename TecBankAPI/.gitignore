@@ -1,0 +1,23 @@
+# --- Archivos de compilación ---
+**/bin/
+**/obj/
+
+# --- Publicaciones locales ---
+PublicadoEnIIS/
+
+# --- Archivos de configuración de Visual Studio ---
+*.user
+*.suo
+.vs/
+
+# --- Node y Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.vscode/
+frontend/.idea/
