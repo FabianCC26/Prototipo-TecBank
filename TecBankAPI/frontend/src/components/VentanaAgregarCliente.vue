@@ -4,15 +4,15 @@
         <form @submit.prevent="agregarCliente">
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
-                <input v-model="cliente.nombre" class="form-control" required>
+                <input v-model="cliente.nombre" class="form-control" required />
             </div>
             <div class="mb-3">
                 <label class="form-label">Correo</label>
-                <input v-model="cliente.correo" class="form-control" required>
+                <input v-model="cliente.correo" class="form-control" required />
             </div>
             <div class="mb-3">
                 <label class="form-label">Teléfono</label>
-                <input v-model="cliente.telefono" class="form-control" required>
+                <input v-model="cliente.telefono" class="form-control" required />
             </div>
             <button type="submit" class="btn btn-success">Registrar</button>
         </form>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import api from '../axios.js'
 
     export default {
         name: 'VentanaAgregarCliente',
@@ -36,7 +36,7 @@
         methods: {
             async agregarCliente() {
                 try {
-                    await axios.post('/api/clientes', this.cliente)
+                    await api.post('/api/clientes', this.cliente)
                     alert('Cliente agregado exitosamente')
                     this.$router.push('/')
                 } catch (error) {

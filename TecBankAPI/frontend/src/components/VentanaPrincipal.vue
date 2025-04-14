@@ -21,9 +21,9 @@
 </template>
 
 <script>
-    import axios from 'axios'
     import jsPDF from 'jspdf'
     import autoTable from 'jspdf-autotable'
+    import api from '../axios'
 
     export default {
         name: 'VentanaPrincipal',
@@ -35,7 +35,7 @@
         methods: {
             async cargarClientes() {
                 try {
-                    const res = await axios.get('/api/clientes')
+                    const res = await api.get('/api/clientes')
                     this.clientes = res.data
                 } catch (err) {
                     console.error('Error al cargar los clientes:', err)

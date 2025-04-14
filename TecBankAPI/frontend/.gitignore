@@ -21,3 +21,13 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Capacitor Android build output
+/android/
+capacitor.config.json
+
+# Axios config
+/src/axios.js
+
+# Configuración específica móvil
+vue.config.mobile.js

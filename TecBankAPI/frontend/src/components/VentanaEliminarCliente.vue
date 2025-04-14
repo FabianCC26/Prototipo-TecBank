@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import api from '../axios'
 
     export default {
         name: 'VentanaEliminarCliente',
@@ -24,7 +24,7 @@
         methods: {
             async eliminarCliente() {
                 try {
-                    await axios.delete(`/api/clientes/${this.idCliente}`)
+                    await api.delete(`/api/clientes/${this.idCliente}`)
                     alert('Cliente eliminado exitosamente')
                     this.$router.push('/')
                 } catch (error) {

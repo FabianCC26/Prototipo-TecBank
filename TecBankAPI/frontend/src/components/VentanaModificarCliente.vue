@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import api from '../axios'
 
     export default {
         name: 'VentanaModificarCliente',
@@ -41,7 +41,7 @@
         methods: {
             async modificarCliente() {
                 try {
-                    await axios.put(`/api/clientes/${this.cliente.id}`, this.cliente)
+                    await api.put(`/api/clientes/${this.cliente.id}`, this.cliente)
                     alert('Cliente modificado correctamente')
                     this.$router.push('/')
                 } catch (error) {
