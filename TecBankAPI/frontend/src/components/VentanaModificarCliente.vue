@@ -41,8 +41,10 @@
         methods: {
             async modificarCliente() {
                 try {
+                    // Enviar solicitud PUT al backend para modificar el cliente
                     await api.put(`/api/clientes/${this.cliente.id}`, this.cliente)
                     alert('Cliente modificado correctamente')
+                    // Redireccionar a la página principal después de modificar el cliente
                     this.$router.push('/')
                 } catch (error) {
                     console.error('Error al modificar cliente:', error)

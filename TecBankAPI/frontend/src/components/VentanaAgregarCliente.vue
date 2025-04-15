@@ -36,8 +36,10 @@
         methods: {
             async agregarCliente() {
                 try {
+                    // Enviar solicitud POST al backend para agregar el cliente
                     await api.post('/api/clientes', this.cliente)
                     alert('Cliente agregado exitosamente')
+                    //Redireccionar a la página principal después de agregar el cliente
                     this.$router.push('/')
                 } catch (error) {
                     console.error('Error al agregar cliente:', error)

@@ -11,19 +11,19 @@ namespace TecBankAPI.Controllers
     public class ClientesController : ControllerBase
     {
         private readonly ClienteService _clienteService;
-
+        //constructor
         public ClientesController(ClienteService clienteService)
         {
             _clienteService = clienteService;
         }
-
+        //funcion para obtener todos los clientes
         [HttpGet]
         public ActionResult<IEnumerable<Cliente>> Get()
         {
             var clientes = _clienteService.GetClientes();
             return Ok(clientes);
         }
-
+        //funcion para obtener un cliente por id
         [HttpGet("{id}")]
         public ActionResult<Cliente> Get(int id)
         {
@@ -35,7 +35,7 @@ namespace TecBankAPI.Controllers
             }
             return Ok(cliente);
         }
-
+        //funcion para crear un cliente
         [HttpPost]
         public ActionResult<Cliente> Post([FromBody] Cliente nuevoCliente)
         {
@@ -45,7 +45,7 @@ namespace TecBankAPI.Controllers
             _clienteService.SaveClientes(clientes);
             return CreatedAtAction(nameof(Get), new { id = nuevoCliente.Id }, nuevoCliente);
         }
-
+        //funcion para actualizar un cliente
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Cliente clienteActualizado)
         {
@@ -68,7 +68,7 @@ namespace TecBankAPI.Controllers
             return Ok(cliente);
         }
 
-
+        //funcion para eliminar un cliente
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

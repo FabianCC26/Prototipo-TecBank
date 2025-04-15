@@ -34,7 +34,9 @@
         },
         methods: {
             async cargarClientes() {
+
                 try {
+                    // Enviar solicitud GET al backend para obtener la lista de clientes
                     const res = await api.get('/api/clientes')
                     this.clientes = res.data
                 } catch (err) {
@@ -43,11 +45,12 @@
                 }
             },
             generarPDF() {
+                // Verificar si hay clientes para generar el PDF
                 if (this.clientes.length === 0) {
                     alert('No hay clientes para generar PDF.')
                     return
                 }
-
+                // Crear un nuevo documento PDF
                 const doc = new jsPDF()
                 doc.text('Listado de Clientes', 14, 15)
 

@@ -24,8 +24,10 @@
         methods: {
             async eliminarCliente() {
                 try {
+                    // Enviar solicitud DELETE al backend para eliminar el cliente
                     await api.delete(`/api/clientes/${this.idCliente}`)
                     alert('Cliente eliminado exitosamente')
+                    // Redireccionar a la página principal después de eliminar el cliente
                     this.$router.push('/')
                 } catch (error) {
                     console.error('Error al eliminar cliente:', error)
